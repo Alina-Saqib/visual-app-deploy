@@ -19,6 +19,7 @@ const ExperienceSection = () => {
         },
       ];
   const isMobile = useMediaQuery("(max-width:900px)");
+  const mediumScreen = useMediaQuery('(min-width:1201px) and (max-width:1512px)');
   return (
     <Box
       sx={{
@@ -32,8 +33,10 @@ const ExperienceSection = () => {
           width: "100%",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: isMobile ? "20px" :"30px",
+          fontSize: isMobile ? "20px" :(mediumScreen ? "32px":"48px"),
+          lineHeight:isMobile?"30px":"45px",
           color: `var(--Text, #F8F1E4)`,
+          mt:mediumScreen ? 7:0
         }}
       >
         <svg
@@ -67,12 +70,12 @@ const ExperienceSection = () => {
         <Typography
           sx={{
             color: "#F8F1E4",
-            width: isMobile ? "100%":"45%",
+            width: isMobile ? "98%":"45%",
             textAlign: "center",
-            fontSize: isMobile ? "16px":"18px",
+            fontSize: isMobile ? "16px":mediumScreen ? "20px" :"24px",
             fontWeight: 400,
-            lineHeight: "30px",
-            mt:5
+            lineHeight: mediumScreen ? "30px":"36px",
+            mt:6
           }}
         >
           Read firsthand accounts of parents who found joy, creativity, and
@@ -81,29 +84,35 @@ const ExperienceSection = () => {
         </Typography>
       </Box>
       <Grid
+        container
+        justifyContent="space-evenly"
+        spacing={isMobile ? 1:6}
         sx={{
-          display: "inline-flex",
-          justifyContent: "center",
-          flexDirection: isMobile ? "column" : "row",
-          gap: "5%",
-          p: "0px 70px",
-          mt: 5,
+          p: isMobile ?"0px 20px":mediumScreen ?"0px 60px":"0px 120px",
+          mt: mediumScreen? 2:7,
+          width:"100%"
         }}
       >
         
         {experiences.map((experience, index) => (
-          <Grid key={index}>
+          <Grid 
+          item
+          xs={12}
+          sm={6}
+          md={5}
+          lg={3.5}
+          key={index}>
             <Typography
               sx={{
                 color: "#F8F1E4",
                 textAlign: "center",
-                fontSize: "16px",
+                fontSize: mediumScreen ?"18px":"20px",
                 fontWeight: 400,
-                lineHeight: "147%",
+                lineHeight: "29.5px",
               }}
             >
               {experience.content}
-              <Typography sx={{ mt: 5, mb: 2 }}>{experience.author}</Typography>
+              <Typography sx={{ mt: 5, mb: mediumScreen ? 0:2,fontSize:mediumScreen ?"20px":"24px",lineHeight:"30.45px" }}>{experience.author}</Typography>
             </Typography>
           </Grid>
         ))}

@@ -6,10 +6,6 @@ import headerlogo from '../assets/headerbg.png'
 import { Menu, MenuItem, useMediaQuery } from "@mui/material";
 import {
     IconButton,
-    Drawer,
-    List,
-    ListItem,
-    ListItemText,
   } from "@mui/material";
   import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
@@ -19,6 +15,7 @@ const pages = ["Home", "Visualizer", "My Stories", "Contact"];
 
 function NavBar({children}:any) {
     const isMobile = useMediaQuery('(max-width:900px)');
+    const mediumScreen = useMediaQuery('(min-width:1201px) and (max-width:1512px)');
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleMenuOpen = (event: any) => {
@@ -35,7 +32,7 @@ function NavBar({children}:any) {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
-    pb:"10vh"
+    pb:mediumScreen ? "10vh" :"5vh"
   }}>
 <Box
 sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
@@ -60,9 +57,13 @@ sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
                 color: "#A9895D",
                 fontSize: "16px",
                 fontWeight: 400,
+                lineHeight:"20px",
                 marginRight: index === pages.length - 1 ? "0" : "20px",
                 marginLeft: index === 0 ? "0" : "20px",
                 cursor: "pointer",
+                "&:hover": {
+                  color: "black",
+                },
               }}
             >
               {page}
@@ -94,6 +95,9 @@ sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
                 fontSize: "16px",
                 fontWeight: 400,
                 cursor: "pointer",
+                "&:hover": {
+                  color: "black",
+                },
               }}
             >
               {page}

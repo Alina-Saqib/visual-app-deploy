@@ -10,7 +10,9 @@ import footerImg from "../assets/footerImage.png";
 import bgImage from "../assets/bgImage.png";
 
 const Footer = () => {
-  const isMobile = useMediaQuery("(max-width:900px)");
+  const isMobile = useMediaQuery("(max-width:1200px)");
+  const mediumScreen = useMediaQuery('(min-width:1201px) and (max-width:1512px)');
+
 
   const listItems = [
     "FAQs",
@@ -21,45 +23,53 @@ const Footer = () => {
   return (
     <Box
       sx={{
-        background: "#E2B7483D",
+        background: "#EDD4A8",
         display: "flex",
         p: isMobile ? "2vh" : "6vh",
         backgroundImage: `linear-gradient(0deg, rgba(92, 71, 40, 0.14) 0%, rgba(92, 71, 40, 0.14) 100%), url(${bgImage})`,
       }}
     >
       <Grid
+      container
+      justifyContent="space-around"
+      spacing={isMobile ? 2:10}
         sx={{
-          display: "inline-flex",
-          justifyContent: "center",
-          flexDirection: isMobile ? "column" : "row",
-          gap: "24%",
-          width: isMobile ?"60%" :"100%",
+          // display: "inline-flex",
+          // justifyContent: "center",
+          // flexDirection: isMobile ? "column" : "row",
+          // width: isMobile ?"60%" :"100%",
         }}
       >
         <Grid
-          sx={{
-            display: "flex",
-            mt: isMobile ? 0 : 6,
-          }}
+        item
+        sm={3}
+        md={4}
+        lg={4}
+        sx={{
+          mt:isMobile ? 3:14
+        }}
+        
         >
           <Typography
             sx={{
               color: "#754B17",
               textAlign: "center",
               fontFamily: "Times New Roman",
-              fontsize: "36px",
+              fontSize: isMobile ? "24px": mediumScreen ?"32px":"36px",
               fontweight: 700,
-              lineheight: "24px",
+              lineHeight: "24px",
             }}
           >
             VISUALSTORY.AI
           </Typography>
         </Grid>
         <Grid
+          item
           sx={{
-            display: "flex",
-            alignItems: "center",
+            display:"flex",
+            alignItems:"center"
           }}
+          lg={4}
         >
           <List>
             {listItems.map((item) => (
@@ -68,10 +78,10 @@ const Footer = () => {
                   color: "#754B17",
                   textAlign: "center",
                   fontFamily: "Times New Roman",
-                  fontSize: isMobile ? "16px":"22px",
+                  fontSize: isMobile ? "16px": mediumScreen?"28px":"32px",
                   fontWeight: 400,
-                  lineheight: "45px",
-                  p:"8px 0"
+                  lineHeight: "45px",
+                  p:isMobile ? "0px" :"1.5vh 0"
                 }}
               >
                 {item}
@@ -80,8 +90,10 @@ const Footer = () => {
           </List>
         </Grid>
         {isMobile ? null : (
-          <Grid>
-            {isMobile ? <></> : <img src={footerImg} width="250px" />}
+          <Grid
+          item
+          lg={4}>
+            {isMobile ? <></> : <img src={footerImg} width="100%" />}
           </Grid>
         )}
       </Grid>

@@ -5,6 +5,7 @@ import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
 
 const CreateTaleSection = () => {
+  const mediumScreen = useMediaQuery('(min-width:1201px) and (max-width:1512px)');
   const gridItems = [
     {
       image: image1,
@@ -30,20 +31,22 @@ const CreateTaleSection = () => {
     <Box
       sx={{
         textAlign: "center",
+        width:"100%"
       }}
     >
       <Typography
-        sx={{
-          textAlign: "center",
-          display: "flex",
-          width: "100%",
-          alignItems: "center",
-          justifyContent: "center",
-          fontSize: isMobile ? "20px" :"30px",
-          color: `var(--Text, #F8F1E4)`,
-        }}
+       sx={{
+        textAlign: "center",
+        display: "flex",
+        width: "100%",
+        alignItems: "center",
+        justifyContent: "center",
+        fontSize: isMobile ? "20px" :(mediumScreen ? "32px":"48px"),
+        lineHeight:isMobile ?"30px":"45px",
+        color: `var(--Text, #F8F1E4)`,
+      }}
       >
-        <svg
+       <svg
           xmlns="http://www.w3.org/2000/svg"
           width="203"
           height="3"
@@ -60,7 +63,7 @@ const CreateTaleSection = () => {
           height="3"
           viewBox="0 0 203 3"
           fill="none"
-          style={{ margin: isMobile? "0px 10px" :"0px 42px"}}
+          style={{ margin: isMobile? "0px 10px" :"0px 42px" }}
         >
           <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
         </svg>
@@ -68,33 +71,40 @@ const CreateTaleSection = () => {
 
       
       <Grid
+      container
+      justifyContent="center"
+      spacing={isMobile ? 1 : 4}
+      
+
         sx={{
-          display: "flex",
-          flexDirection: isMobile ? "column" : "row",
-          justifyContent: "center",
-          textAlign: "center",
-          gap: "8%",
           mt: 5,
-          mb: 2,
+          mb: isMobile ? 1: 6,
         }}
       >
         {gridItems.map((item, index) => (
           <Grid
+          item
             key={index}
+            xs={12}
+            sm={6}
+            md={3.5}
+            lg={3.5}
             sx={{
               mb: isMobile ? 2 : 0,
               p: isMobile ? "0px 16px" : 0,
+              textAlign:"center"
             }}
           >
-            <img src={item.image} width="200px" alt={`Image ${index + 1}`} />
+            <img src={item.image} width={isMobile ? "220px":mediumScreen ? "250px" :"289px"} alt={`Image ${index + 1}`} />
             <Typography
               sx={{
+                pt:4,
                 color: "#DDCAA6",
                 textAlign: "center",
                 fontFeatureSettings: "'clig' off, 'liga' off",
-                fontSize: "24px",
+                fontSize: isMobile? "25px":mediumScreen ? "28px":"36px",
                 fontWeight: 400,
-                lineHeight: "40px",
+                lineHeight: "45px",
               }}
             >
               {item.title}
@@ -104,10 +114,12 @@ const CreateTaleSection = () => {
                 color: `var(--Text, #F8F1E4)`,
                 textAlign: "center",
                 fontFeatureSettings: "'clig' off, 'liga' off",
-                fontSize: "14px",
+                fontSize: isMobile ?"18px":mediumScreen ?"20px":"24px",
                 fontWeight: 400,
-                lineHeight: "25px",
-                width: isMobile ? "100%" : "240px",
+                lineHeight: isMobile?"30px":"35px",
+                p:3
+                 //width: isMobile ? "100%" : "50%",
+                
               }}
             >
               {item.description}
