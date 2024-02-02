@@ -31,7 +31,7 @@ const Footer = () => {
     >
       <Grid
       container
-      justifyContent={isMobile ? "" :"space-around"}
+      justifyContent={isMobile ? "flex-start" :"space-around"}
       spacing={isMobile ? 1:10}
         sx={{
           // display: "inline-flex",
@@ -42,9 +42,8 @@ const Footer = () => {
       >
         <Grid
         item
-        sm={2}
-        md={4}
-        lg={4}
+        md={1}
+        lg={1}
         sx={{
           mt:isMobile ? 3:14
         }}
@@ -70,7 +69,7 @@ const Footer = () => {
             alignItems:"center"
           }}
           lg={4}
-          sm={2}
+          
         >
           <List>
             {listItems.map((item) => (
@@ -82,7 +81,7 @@ const Footer = () => {
                   fontSize: isMobile ? "16px": mediumScreen?"28px":"32px",
                   fontWeight: 400,
                   lineHeight: "45px",
-                  p:isMobile ? "0px 8px" :"1.5vh 0"
+                  p:isMobile ? "0" :"1.5vh 0"
                 }}
               >
                 {item}
