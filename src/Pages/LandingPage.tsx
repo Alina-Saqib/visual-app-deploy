@@ -229,15 +229,15 @@ const LandingPage = () => {
           sx={{
             background: `linear-gradient(0deg, rgba(48, 48, 48, 0.20) 0%, rgba(48, 48, 48, 0.20) 100%), url(${headerbg})`,
             height: isMobile ? "350px" : "909px",
-            //height: "65vh", // Set the height to cover the entire viewport height
-            backgroundSize: "cover", // Use 'cover' to make sure the image covers the entire space
+            backgroundSize: "cover", 
+            display:"flex",
+            flexDirection:"column",
+            alignItems:"center",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "50% 50%",
-            pt:"5%",
-            // flexDirection:"column"
-            //Opacity: "83%",
-            //p: isMobile ? "6vh" : mediumScreen ? "7vh" : "5vh",
-             position: "relative",
+            pt:"7vh",
+            
+         
           }}
         >
            <Typography
@@ -274,21 +274,21 @@ const LandingPage = () => {
               <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
             </svg>
           </Typography>
-            <Box
-              sx={{
-                position: "absolute",
-                bottom: isMobile ? "30%" :"50%", // Adjust the position as needed
-                left: "50%", // Center horizontally
-                transform: "translateX(-50%)", // Center horizontally
-              }}
-            >
+          <Box sx={{
+            height:"800px",
+            alignItems:"center",
+            display:"flex",
+            justifyContent:"center"
+          }}>
+           
               <CustomizeButton buttontext="Try Now!" />
-            </Box>
+              </Box>
+           
         </Box>
         <img
           src={mountainRocks}
           width={isMobile ? "300px" : "500px"}
-          style={{ marginTop: isMobile ? "-80px" : "-130px" }}
+          style={{ marginTop: isMobile ? "-80px" : "-130px" ,zIndex:1}}
         />
         <Box
           sx={{
