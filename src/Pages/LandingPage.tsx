@@ -235,7 +235,7 @@ const LandingPage = () => {
             alignItems:"center",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "50% 50%",
-            pt:"7vh",
+            pt:isMobile?"7vh" :"11vh",
             
          
           }}
