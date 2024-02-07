@@ -59,7 +59,7 @@ const CreateTaleSection = () => {
         >
           <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
         </svg>
-        Create a one-of-a-kind tale for your child
+        How it Works?
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="203"

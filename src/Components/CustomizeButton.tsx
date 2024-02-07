@@ -24,7 +24,7 @@ const CustomizeButton = ({buttontext} : any) => {
     >
       <Box
         sx={{
-          p: mediumScreen ? "0px 20px":"0px 25px",
+          p: mediumScreen ? "0px 20px": isMobile?  "0px 10px":"0px 25px",
           borderRadius: "9px",
           border: "3px solid #A67334",
           background:
@@ -35,7 +35,7 @@ const CustomizeButton = ({buttontext} : any) => {
           sx={{
             whiteSpace:"nowrap",
             color: "#47371F",
-            fontSize: isMobile? "18px" : mediumScreen ? "18px" :"25px",
+            fontSize: isMobile? "16px" : mediumScreen ? "18px" :"25px",
             fontWeight: 400,
             lineHeight: isMobile? "45px":mediumScreen ?"40px":"58px",
             textTransform: 'none',

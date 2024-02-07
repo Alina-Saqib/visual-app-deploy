@@ -64,12 +64,12 @@ const LandingPage = () => {
           <Typography
             sx={{
               pt: isMobile ? 1 : mediumScreen ? 2 : 7,
-              color: "#F1EFEF",
+              color: "#FFF",
               fontFeatureSettings: "'clig' off, 'liga' off",
               fontSize: isMobile ? "25px" : mediumScreen ? "28px" : "30px",
               fontWeight: 400,
               lineHeight: isMobile ? "40px" : mediumScreen ? "40px" : "58px",
-              width:"43%"
+              width:isMobile ?  "100%":"43%"
             }}
           >
             Create Heroic, Beautifully Illustrated Stories of Your Child,
@@ -77,7 +77,7 @@ const LandingPage = () => {
           </Typography>
           <Typography
             sx={{
-              color: "#F1EFEF",
+              color: "#FFF",
               fontFeatureSettings: "'clig' off, 'liga' off",
               "-webkit-text-stroke-width": "0.25",
               "-webkit-text-stroke-color": "#FFF",
@@ -230,15 +230,60 @@ const LandingPage = () => {
             background: `linear-gradient(0deg, rgba(48, 48, 48, 0.20) 0%, rgba(48, 48, 48, 0.20) 100%), url(${headerbg})`,
             height: isMobile ? "350px" : "909px",
             //height: "65vh", // Set the height to cover the entire viewport height
-            display: "flex",
             backgroundSize: "cover", // Use 'cover' to make sure the image covers the entire space
             backgroundRepeat: "no-repeat",
             backgroundPosition: "50% 50%",
-            justifyContent: "center",
-            alignItems: "center",
+            pt:"5%",
+            // flexDirection:"column"
+            //Opacity: "83%",
+            //p: isMobile ? "6vh" : mediumScreen ? "7vh" : "5vh",
+             position: "relative",
           }}
         >
-          <CustomizeButton buttontext="Make Bedtime Stories Unforgettable - Try Now!" />
+           <Typography
+            sx={{
+              textAlign: "center",
+              display: "flex",
+              width: "100%",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: isMobile ? "20px" : mediumScreen ? "30px" : "48px",
+              lineHeight: isMobile ? "30px" : "45px",
+              color: `var(--Text, #F8F1E4)`,
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="325"
+              height="3"
+              viewBox="0 0 203 3"
+              fill="none"
+              style={{ margin: isMobile ? "0px 10px" : "0px 42px" }}
+            >
+              <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
+            </svg>
+            Make Bedtime Stories Unforgettable 
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="325"
+              height="3"
+              viewBox="0 0 203 3"
+              fill="none"
+              style={{ margin: isMobile ? "0px 10px" : "0px 42px" }}
+            >
+              <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
+            </svg>
+          </Typography>
+            <Box
+              sx={{
+                position: "absolute",
+                bottom: isMobile ? "30%" :"50%", // Adjust the position as needed
+                left: "50%", // Center horizontally
+                transform: "translateX(-50%)", // Center horizontally
+              }}
+            >
+              <CustomizeButton buttontext="Try Now!" />
+            </Box>
         </Box>
         <img
           src={mountainRocks}
@@ -293,7 +338,7 @@ const LandingPage = () => {
             >
               <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
             </svg>
-            Visual StoryBoarding at a click
+            Turn Imagination into Stories
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="325"
@@ -326,7 +371,7 @@ const LandingPage = () => {
                 transform: "translateX(-50%)", // Center horizontally
               }}
             >
-              <CustomizeButton buttontext="Turn Imagination into Stories - Get Started!" />
+              <CustomizeButton buttontext="Get Started!" />
             </Box>
           {/* </Box> */}
         </Box>

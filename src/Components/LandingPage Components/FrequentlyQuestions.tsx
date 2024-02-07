@@ -10,7 +10,7 @@ const FrequentlyQuestions = () => {
     const fontSize = useMediaQuery('(min-width:1201px) and (max-width:1512px)')
 
   const questions = [
-  { ques: "How does VisualStory.AI work?" ,ans:"ans1"},
+  { ques: "How does EnchantedPages.Ai work?" ,ans:"ans1"},
     {ques: "Are there any limitations on story creation or image generation?", ans:"ans2"},
    { ques:"What subscription options are available, and what do they include?",ans:"ans3"},
     {ques:"Can I save and share the stories I create?",ans:"ans4"},

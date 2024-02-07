@@ -38,7 +38,7 @@ sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
     <Box
       sx={{
         display: "inline-flex",
-        padding: isMobile ? "8px 15px" :"8px 10px 8px 40px",
+        padding: isMobile ? "5px 10px" :"8px 10px 8px 40px",
         justifyContent: isMobile? "space-between":"center",
         alignItems: "center",
         borderRadius: "30px",
