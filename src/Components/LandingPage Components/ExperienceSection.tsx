@@ -4,17 +4,17 @@ const ExperienceSection = () => {
     const experiences = [
         {
           content:
-            "As a working mom, bedtime stories became more of a routine than an adventure. That changed when I discovered the VisualStory.AI Platform. Crafting characters and weaving stories became a magical bonding experience with my kids. Now, every night is a journey into fantastical worlds, making bedtime the highlight of our day!",
+            "As a working mom, bedtime stories became more of a routine than an adventure. That changed when I discovered the EnchantedPages.Ai Platform. Crafting characters and weaving stories became a magical bonding experience with my kids. Now, every night is a journey into fantastical worlds, making bedtime the highlight of our day!",
           author: "Sarah M.",
         },
         {
           content:
-            "VisualStory.AI brought a new dimension to our family time. My wife and I, both working professionals, struggled to find quality moments with our kids. The Virtual Storybook platform turned storytelling into an interactive adventure. The ease of using voice input made it accessible for our young ones, and the generated stories never cease to amaze us.",
+            "EnchantedPages.Ai brought a new dimension to our family time. My wife and I, both working professionals, struggled to find quality moments with our kids. The Virtual Storybook platform turned storytelling into an interactive adventure. The ease of using voice input made it accessible for our young ones, and the generated stories never cease to amaze us.",
           author: "Mark H.",
         },
         {
           content:
-            "As a tech-savvy mom, I was skeptical about yet another platform for storytelling. VisualStory.AI, however, exceeded all expectations. The fusion of advanced technology and classic storytelling is pure genius. The subscription model is worth every penny, unlocking features that deepen the storytelling experience. Now, screen time isn't just passive; it's an active engagement in creating magical stories with my kids.",
+            "As a tech-savvy mom, I was skeptical about yet another platform for storytelling. EnchantedPages.Ai, however, exceeded all expectations. The fusion of advanced technology and classic storytelling is pure genius. The subscription model is worth every penny, unlocking features that deepen the storytelling experience. Now, screen time isn't just passive; it's an active engagement in creating magical stories with my kids.",
           author: "Sarah M.",
         },
       ];
