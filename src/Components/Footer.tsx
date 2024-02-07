@@ -59,7 +59,7 @@ const Footer = () => {
               lineHeight: "24px",
             }}
           >
-            VISUALSTORY.AI
+           EnchantedPages.Ai
           </Typography>
         </Grid>
         <Grid

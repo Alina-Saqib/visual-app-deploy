@@ -36,7 +36,7 @@ const ExperienceSection = () => {
           fontSize: isMobile ? "20px" :(mediumScreen ? "32px":"48px"),
           lineHeight:isMobile?"30px":"45px",
           color: `var(--Text, #F8F1E4)`,
-          mt:mediumScreen ? 7:0
+          mt:mediumScreen ? 7:6
         }}
       >
         <svg

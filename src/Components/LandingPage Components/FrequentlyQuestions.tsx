@@ -6,7 +6,8 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const FrequentlyQuestions = () => {
     const isMobile = useMediaQuery("(max-width:1200px)");
-    const mediumScreen = useMediaQuery('(min-width:1201px) and (max-width:1512px)');
+    const mediumScreen = useMediaQuery('(min-width:1201px) and (max-width:1810px)');
+    const fontSize = useMediaQuery('(min-width:1201px) and (max-width:1512px)')
 
   const questions = [
   { ques: "How does VisualStory.AI work?" ,ans:"ans1"},
@@ -32,7 +33,7 @@ const FrequentlyQuestions = () => {
           alignItems: "center",
           whiteSpace:"nowrap",
           color: "var(--Text, #F8F1E4)",
-          fontSize: isMobile ? "20px" : mediumScreen ?"32px":"48px",
+          fontSize: isMobile ? "20px" : fontSize ?"32px":"48px",
           fontWeight: 400,
           lineHeight: isMobile ?"40px" :"80px",
           width: mediumScreen ? "85%" :"100%"

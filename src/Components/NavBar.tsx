@@ -36,16 +36,17 @@ function NavBar({children}:any) {
   }}>
 <Box
 sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
-    <Container
+    <Box
       sx={{
         display: "inline-flex",
-        padding: isMobile ? "8px 15px" :"8px 16px 8px 48px",
+        padding: isMobile ? "8px 15px" :"8px 10px 8px 40px",
         justifyContent: isMobile? "space-between":"center",
         alignItems: "center",
         borderRadius: "30px",
-        backgroundColor: "#F3EBDA",
-        width: isMobile ? "100%" :"70%"
-        //gap: "10%",
+        backgroundColor: "#ede1c7",
+        width: isMobile ? "100%" :"70%",
+        boxShadow:"2px 2px 5px 0px rgba(0, 0, 0, 0.5)"
+        
       }}
     >
       <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -62,7 +63,7 @@ sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
                 marginLeft: index === 0 ? "0" : "20px",
                 cursor: "pointer",
                 "&:hover": {
-                  color: "black",
+                  color: "#5C4033",
                 },
               }}
             >
@@ -111,25 +112,30 @@ sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
           padding: "10px 16px",
           justifyContent: "center",
           alignItems: "center",
-          // gap: '16px',
+          //gap: '16px',
           borderRadius: "24px",
           border: "1px solid #CF9D54",
           background:
             "var(--Button, linear-gradient(178deg, #E0B65D 20.38%, #F0D191 73.21%, rgba(255, 255, 255, 0.00) 139.09%))",
-        }}
+            '&:hover':{
+              bgcolor:"#CF9D54"
+            }
+          }}
       >
         <Typography
           sx={{
             color: "#6E4500",
             fontFamily: "IM FELL English",
             fontSize: isMobile ? "12px":"16px",
+            textTransform: 'none',
             fontWeight: 400,
+           
           }}
         >
-          Make your own Story
+          Start Crafting Magical Stories Today!
         </Typography>
       </Button>
-    </Container>
+    </Box>
     </Box>
     <Box>
       {children}
