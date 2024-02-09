@@ -203,9 +203,9 @@ const LandingPage = () => {
           <hr style={{width:'95%', border:"2px solid #ECBC95",margin:0}}/>
           <Box sx={{display:"flex",
         alignItems:"flex-end",mt:'-3%'}}>
-          <img src={linedecor1} width='3%' style={{marginLeft:"8%", marginBottom:"-2.4%"}}/>
+          <img src={linedecor1} width='3%' style={{marginLeft:"3.5%", marginBottom:"-2.4%"}}/>
           <img src={linedecor1}  width='3%' style={{marginLeft:"10%", marginBottom:"-1.5%"}}/>
-          <img src={linedecor2}  width='6%' style={{marginLeft:"17%", marginBottom:"-1.2%"}}/>
+          <img src={linedecor2}  width='6%' style={{marginLeft:"21.3%", marginBottom:"-1.2%"}}/>
           <img src={linedecor2}  width='8%' style={{marginLeft:"-0.9%", marginBottom:"-2.5%"}}/>
           <img src={linedecor2}  width='6%' style={{marginLeft:"-0.9%", marginBottom:"-1.2%"}}/>
           <img src={linedecor1}  width='3%' style={{marginLeft:"22%", marginBottom:"-1.5%"}}/>
