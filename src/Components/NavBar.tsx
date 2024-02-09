@@ -31,7 +31,7 @@ function NavBar({children}:any) {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: '50% 50%',
-    pb:mediumScreen ? "10vh" :"5vh"
+    pb:mediumScreen ? "10vh" :"10vh"
   }}>
 <Box
 sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>

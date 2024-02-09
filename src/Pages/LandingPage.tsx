@@ -47,7 +47,7 @@ const LandingPage = () => {
       <NavBar>
         <Box
           sx={{
-            p: isMobile ? "2px 5%" : mediumScreen ? "2px 5%" : "5% 8% 0px 8%",
+            p: isMobile ? "2px 5%" : mediumScreen ? "2px 5%" : "2px 5%",
           }}
         >
           {/* <Typography
@@ -66,10 +66,10 @@ const LandingPage = () => {
               pt: isMobile ? 1 : mediumScreen ? 2 : 7,
               color: "#FFF",
               fontFeatureSettings: "'clig' off, 'liga' off",
-              fontSize: isMobile ? "25px" : mediumScreen ? "28px" : "30px",
+              fontSize: isMobile ? "25px" : mediumScreen ? "28px" : "28px",
               fontWeight: 400,
-              lineHeight: isMobile ? "40px" : mediumScreen ? "40px" : "58px",
-              width:isMobile ?  "100%": mediumScreen ? "43%" :"50%",
+              lineHeight: isMobile ? "40px" : mediumScreen ? "40px" : "40px",
+              width:isMobile ?  "100%": mediumScreen ? "43%" :"43%",
             }}
           >
             Create Heroic, Beautifully Illustrated Stories of Your Child,
@@ -81,10 +81,10 @@ const LandingPage = () => {
               fontFeatureSettings: "'clig' off, 'liga' off",
               "-webkit-text-stroke-width": "0.25",
               "-webkit-text-stroke-color": "#FFF",
-              fontSize: isMobile ? "12px" : mediumScreen ? "16px" : "22px",
+              fontSize: isMobile ? "12px" : mediumScreen ? "16px" : "16px",
               fontWeight: 400,
-              lineHeight: mediumScreen ? "30px" : "32px",
-              width: isMobile ? "100%" : mediumScreen ? "43%" : "40%",
+              lineHeight: mediumScreen ? "30px" : "30px",
+              width: isMobile ? "100%" : mediumScreen ? "43%" : "43%",
               mt: 3,
               mb: 5,
             }}
@@ -100,7 +100,7 @@ const LandingPage = () => {
         </Box>
         <Box
           sx={{
-            m: isMobile ? "10px 5%" : mediumScreen ? "50px 5%" : "140px 8%",
+            m: isMobile ? "10px 5%" : mediumScreen ? "50px 5%" : "50px 5%",
             p:'15px 0px',
            //border: "1px solid #000",
            boxShadow:"2px 2px 5px 0px rgba(0, 0, 0, 0.5)",
