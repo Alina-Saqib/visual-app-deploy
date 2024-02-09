@@ -50,7 +50,7 @@ const LandingPage = () => {
             p: isMobile ? "2px 5%" : mediumScreen ? "2px 5%" : "5% 8% 0px 8%",
           }}
         >
-          <Typography
+          {/* <Typography
             sx={{
               color: "#FFF",
               fontFeatureSettings: "'clig' off, 'liga' off",
@@ -60,7 +60,7 @@ const LandingPage = () => {
             }}
           >
             EnchantedPages.Ai
-          </Typography>
+          </Typography> */}
           <Typography
             sx={{
               pt: isMobile ? 1 : mediumScreen ? 2 : 7,
@@ -69,7 +69,7 @@ const LandingPage = () => {
               fontSize: isMobile ? "25px" : mediumScreen ? "28px" : "30px",
               fontWeight: 400,
               lineHeight: isMobile ? "40px" : mediumScreen ? "40px" : "58px",
-              width:isMobile ?  "100%":"43%"
+              width:isMobile ?  "100%": mediumScreen ? "43%" :"50%",
             }}
           >
             Create Heroic, Beautifully Illustrated Stories of Your Child,
@@ -116,10 +116,10 @@ const LandingPage = () => {
           >
             <Grid
               sx={{
-                display: "inline-flex",
+                display: "flex",
                 justifyContent: "center",
                 width: "100%",
-                alignItems: isMobile ? "center" : "none",
+                alignItems: isMobile ? "center" : "flex-start",
                 gap: isMobile ? "0px" : "20px",
                 p: isMobile ? "0" : "30px 10px",
                 flexDirection: isMobile ? "column" : "row",
@@ -203,7 +203,7 @@ const LandingPage = () => {
           <hr style={{width:'95%', border:"2px solid #ECBC95",margin:0}}/>
           <Box sx={{display:"flex",
         alignItems:"flex-end",mt:'-3%'}}>
-          <img src={linedecor1} width='3%' style={{marginLeft:"4%", marginBottom:"-2.3%"}}/>
+          <img src={linedecor1} width='3%' style={{marginLeft:"4%", marginBottom:"-2.0%"}}/>
           <img src={linedecor1}  width='3%' style={{marginLeft:"10%", marginBottom:"-1.5%"}}/>
           <img src={linedecor2}  width='6%' style={{marginLeft:"23%", marginBottom:"-1.2%"}}/>
           <img src={linedecor2}  width='8%' style={{marginLeft:"-0.9%", marginBottom:"-2%"}}/>
@@ -233,6 +233,7 @@ const LandingPage = () => {
             display:"flex",
             flexDirection:"column",
             alignItems:"center",
+            justifyContent:"center",
             backgroundRepeat: "no-repeat",
             backgroundPosition: "50% 50%",
             pt:isMobile?"7vh" :"11vh",
@@ -245,6 +246,7 @@ const LandingPage = () => {
               textAlign: "center",
               display: "flex",
               width: "100%",
+              mb:4,
               alignItems: "center",
               justifyContent: "center",
               fontSize: isMobile ? "20px" : mediumScreen ? "30px" : "48px",
@@ -274,15 +276,15 @@ const LandingPage = () => {
               <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
             </svg>
           </Typography>
-          <Box sx={{
+          {/* <Box sx={{
             height:"800px",
             alignItems:"center",
             display:"flex",
             justifyContent:"center"
-          }}>
+          }}> */}
            
               <CustomizeButton buttontext="Try Now!" />
-              </Box>
+              {/* </Box> */}
            
         </Box>
         <img

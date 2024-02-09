@@ -43,9 +43,9 @@ const CreateTaleSection = () => {
           width: "100%",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: isMobile ? "20px" : mediumScreen ? "32px" : "48px",
+          fontSize: isMobile ? "20px" : mediumScreen ? "25px" : "48px",
           lineHeight: isMobile ? "30px" : "45px",
-          pt:5,
+          pt:0,
           color: `var(--Text, #F8F1E4)`,
         }}
       >
@@ -59,7 +59,7 @@ const CreateTaleSection = () => {
         >
           <path d="M0 1.5L203 1.50002" stroke="#F8F1E4" stroke-width="2" />
         </svg>
-        How it Works?
+        How it Works
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="203"
@@ -75,10 +75,11 @@ const CreateTaleSection = () => {
       <Grid
         container
         justifyContent="center"
-        spacing={isMobile ? 1 : 4}
+        spacing={isMobile ? 1 : 3}
         sx={{
-          mt: 5,
-          mb: isMobile ? 1 : 6,
+          mt: mediumScreen ? 0:4,
+          mb: isMobile ? 1 : 4,
+          p:"0px 32px"
         }}
       >
         {gridItems.map((item, index) => (
@@ -88,7 +89,7 @@ const CreateTaleSection = () => {
             xs={12}
             sm={6}
             md={3.5}
-            lg={3}
+            lg={3.9}
             sx={{
               mb: isMobile ? 2 : 0,
               p: isMobile ? "0px 16px" : 0,
@@ -97,18 +98,18 @@ const CreateTaleSection = () => {
           >
             <img
               src={item.image}
-              width={isMobile ? "220px" : mediumScreen ? "250px" : "289px"}
+              width={isMobile ? "220px" : mediumScreen ? "180px" : "289px"}
               alt={`Image ${index + 1}`}
             />
             <Typography
               sx={{
-                pt: 4,
+                pt: mediumScreen ? 1 :3,
                 color: "#DDCAA6",
                 textAlign: "center",
                 fontFeatureSettings: "'clig' off, 'liga' off",
-                fontSize: isMobile ? "25px" : mediumScreen ? "28px" : "36px",
+                fontSize: isMobile ? "25px" : mediumScreen ? "22px" : "36px",
                 fontWeight: 400,
-                lineHeight: "45px",
+                lineHeight: mediumScreen ? "30px" :"48px",
               }}
             >
               {item.title}
@@ -118,10 +119,10 @@ const CreateTaleSection = () => {
                 color: `var(--Text, #F8F1E4)`,
                 textAlign: "center",
                 fontFeatureSettings: "'clig' off, 'liga' off",
-                fontSize: isMobile ? "18px" : mediumScreen ? "20px" : "24px",
+                fontSize: isMobile ? "18px" : mediumScreen ? "16px" : "24px",
                 fontWeight: 400,
-                lineHeight: isMobile ? "30px" : "35px",
-                p: 3,
+                lineHeight: isMobile ? "30px" : mediumScreen  ? "28px" :"35px",
+                pt:mediumScreen ? 1 :3 ,
                 //width: isMobile ? "100%" : "50%",
               }}
             >

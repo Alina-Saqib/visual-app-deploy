@@ -9,7 +9,7 @@ import {
   import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
-const pages = ["Home", "Visualizer", "My Stories", "Contact"];
+const pages = ["EnchantedPages.Ai", "Visualizer", "My Stories", "Contact"];
 
 
 function NavBar({children}:any) {
@@ -55,8 +55,8 @@ sx={{display:"flex",justifyContent:"center" , alignItems:"center",p:"45px"}}>
               key={page}
               sx={{
                 color: "#A9895D",
-                fontSize: "16px",
-                fontWeight: 400,
+                fontSize: index=== 0 ? "18px" : "16px",
+                fontWeight: index=== 0 ?  900 :400,
                 lineHeight:"20px",
                 marginRight: index === pages.length - 1 ? "0" : "20px",
                 marginLeft: index === 0 ? "0" : "20px",
